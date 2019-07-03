@@ -12,7 +12,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface Input_OnlyText_Cell : UITableViewCell
 @property(nonatomic, strong)UITextField *textField;
-
+@property(nonatomic, strong)RACSubject *cellRACSubject;
+@property(nonatomic, copy) void(^textValueChangedBlock)(NSString *textStr);
 -(void)setPlacehold:(NSString *)placeholdStr withValue:(NSString *)value;
 
 @end

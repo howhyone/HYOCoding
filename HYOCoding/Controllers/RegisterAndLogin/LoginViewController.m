@@ -9,6 +9,10 @@
 #import "LoginViewController.h"
 #import "LoginModel.h"
 #import "Input_OnlyText_Cell.h"
+#import "ForgetPasswordViewController.h"
+#import "HYOCoding_NetAPIManager.h"
+
+
 @interface LoginViewController ()<UITableViewDelegate,UITableViewDataSource>
 
 @property(nonatomic, strong)LoginModel *loginM;
@@ -17,19 +21,18 @@
 @property(nonatomic, strong)UIView *footView;
 @property(nonatomic, strong)UIButton *forgetPasswordBtn;
 @property(nonatomic, strong)UIButton *registerBtn;
-
+@property(nonatomic, strong)Input_OnlyText_Cell *cell;
+@property(nonatomic, strong)UIActivityIndicatorView *activityIndicatorView;
 @end
+
 
 @implementation LoginViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.loginM = [[LoginModel alloc] init];
-    
-//    [self.view addSubview:self.myTableView];
-//    [_myTableView registerClass:[Input_OnlyText_Cell class] forCellReuseIdentifier:@"Input_OnlyText_Cell"];
     self.myTableView.tableHeaderView = [self customHeaderView];
-    self.myTableView.tableFooterView = [self customBottomView];
+    self.myTableView.tableFooterView = [self customFooterView];
     
 }
 
@@ -42,7 +45,6 @@
             TPKeyboardAvoidingTableView *tableView = [[TPKeyboardAvoidingTableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
 //            _myTableView = tableView;
             [tableView registerClass:[Input_OnlyText_Cell class] forCellReuseIdentifier:@"Input_OnlyText_Cell"];
-//            tableView.backgroundColor = [UIColor whiteColor];
             tableView.delegate = self;
             tableView.dataSource = self;
             [tableView beginUpdates];
@@ -74,7 +76,7 @@
     return headerView;
 }
 
--(UIView *)customBottomView
+-(UIView *)customFooterView
 {
     UIView *bottomView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, kScale_Width, 110 * kScale_Height)];
     
@@ -102,6 +104,7 @@
     [_loginBtn setTitle:@"登录" forState:UIControlStateNormal];
     [_loginBtn addTarget:self action:@selector(loginApp) forControlEvents:UIControlEventTouchUpInside];
     [_loginBtn setBackgroundColor:[UIColor colorWithRed:109/255 green:156/255 blue:255/255 alpha:1]];
+    
     [bottomView addSubview:_loginBtn];
     [_loginBtn mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(self->_forgetPasswordBtn.bottom).offset(18);
@@ -109,6 +112,14 @@
         make.right.equalTo(self.view.right).offset(-18);
         make.height.equalTo(50);
     }];
+    
+    RAC(self,loginBtn.enabled) = [RACSignal combineLatest:@[RACObserve(self,loginM.emailStr),
+                                                           RACObserve(self,loginM.secretStr)]
+                                                   reduce:^id(NSString *emailStr,
+                                                              NSString *codeStr ){
+                                                       return @((emailStr.length > 0 && codeStr.length > 0) );
+                                                           }];
+    
     _registerBtn = [UIButton buttonWithType:UIButtonTypeSystem];
     [_registerBtn setTitle:@"注册新账号" forState:UIControlStateNormal];
     [_registerBtn addTarget:self action:@selector(clickRegister) forControlEvents:UIControlEventTouchUpInside];
@@ -119,6 +130,7 @@
         make.width.equalTo(76*kScale_Width);
         make.height.equalTo(16);
     }];
+    
     return bottomView;
 }
 -(UIView *)headViewInfo
@@ -126,8 +138,8 @@
     return self.view;
     
 }
-#pragma mark - ------- Table view data source
 
+#pragma mark - ------- Table view data source
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     return 1;
@@ -143,10 +155,25 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     Input_OnlyText_Cell *cell = [[Input_OnlyText_Cell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"Input_OnlyText_Cell"];
+    self.cell = cell;
+    __weak typeof(self) weakSelf = self;
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;  //处理 cell选中有背景颜色
+    cell.cellRACSubject = [RACSubject subject];
+    [cell.cellRACSubject subscribeNext:^(id x) {
+        self->_phoneNum = x;
+    }];
     if (indexPath.row == 0) {
         [cell setPlacehold:@"手机号/邮箱/用户名"  withValue:@""];
+        cell.textValueChangedBlock = ^(NSString * _Nonnull textStr) {
+            [LoginModel setUserEmail:textStr];
+            weakSelf.loginM.emailStr  = [LoginModel preUserEmail];
+        };
     }else if (indexPath.row == 1){
-        [cell setPlacehold:@"密码" withColor:[UIColor grayColor]];
+        [cell setPlacehold:@"密码"  withValue:@""];
+        cell.textValueChangedBlock = ^(NSString * _Nonnull textStr) {
+            [LoginModel setUserSecret:textStr];
+            weakSelf.loginM.secretStr = [LoginModel preUserSecret];
+        };
     }
     return cell;
 }
@@ -159,17 +186,32 @@
 -(void)forgetPassword
 {
     
+    ForgetPasswordViewController *forgetPasswordVC = [ForgetPasswordViewController VCWithUserinfo:_phoneNum?_phoneNum:nil];
+    [self.navigationController pushViewController:forgetPasswordVC animated:YES];
 }
 
 -(void)loginApp
 {
+    [self.view endEditing:YES]; //关闭键盘
+//    设置 旋转等待动画（小菊花）
+    if (!_activityIndicatorView) {
+        _activityIndicatorView = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
+        CGSize captchaViewSize = _loginBtn.frame.size;
+        [_activityIndicatorView setCenter:CGPointMake(captchaViewSize.width/2, captchaViewSize.height/2)];
+        [_loginBtn addSubview:_activityIndicatorView];
+    }
+    [_activityIndicatorView startAnimating];
     
+    [[HYOCoding_NetAPIManager sharedManager] request_Login_WithPath:@"path" Params:@"params" andBlock:^(id  _Nonnull data, NSError * _Nonnull error) {
+        
+    }];
 }
 
 -(void)clickRegister
 {
     
 }
+
 /*
 #pragma mark - Navigation
 

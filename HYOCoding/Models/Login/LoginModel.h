@@ -12,12 +12,14 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface LoginModel : NSObject
 @property(nonatomic, strong)NSString* phoneNumStr,*emailStr;
-@property(nonatomic, strong) NSString *codeStr;
+@property(nonatomic, strong) NSString *secretStr;
 
 +(BOOL) isLogin;
 +(void)doLogout;
++(void)setUserEmail:(NSString *)emailStr;
 +(NSString *)preUserEmail;
-
++(void)setUserSecret:(NSString *)secretStr;
++(NSString *)preUserSecret;
 @end
 
 NS_ASSUME_NONNULL_END

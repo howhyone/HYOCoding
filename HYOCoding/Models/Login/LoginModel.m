@@ -12,6 +12,7 @@
 #define kLoginStatus @"login_status"
 #define kUserDefaults [NSUserDefaults standardUserDefaults]
 #define kLoginPreUserEmail @"pre_user_email"
+#define kLoginPreUserSecret @"pre_user_secret"
 
 static User *curLoginUser;
 
@@ -35,10 +36,42 @@ static User *curLoginUser;
         }
     }];
 }
+
++(void)setUserEmail:(NSString *)emailStr
+{
+    if (emailStr.length < 0) {
+        return;
+    }
+    NSUserDefaults *userDefaults = kUserDefaults;
+    [userDefaults setObject:emailStr forKey:kLoginPreUserEmail];
+    [userDefaults synchronize];
+}
+
 +(NSString *)preUserEmail
 {
-    
     NSString *preUserEmailStr = [kUserDefaults objectForKey:kLoginPreUserEmail];
+    if (preUserEmailStr.length < 0) {
+        return nil;
+    }
     return preUserEmailStr;
+}
+
++(void)setUserSecret:(NSString *)secretStr
+{
+    if (secretStr.length < 0) {
+        return;
+    }
+    NSUserDefaults *userDefaults = kUserDefaults;
+    [userDefaults setObject:secretStr forKey:kLoginPreUserSecret];
+    [userDefaults synchronize];
+}
+
++(NSString *)preUserSecret
+{
+    NSString *secretStr = [kUserDefaults objectForKey:kLoginPreUserSecret];
+    if (secretStr.length < 0) {
+        return nil;
+    }
+    return secretStr;
 }
 @end

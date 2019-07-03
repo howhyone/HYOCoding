@@ -49,12 +49,16 @@
 
 -(void)textValueChanged:(UITextField *)textField
 {
-    
+    if (self.textValueChangedBlock) {
+        self.textValueChangedBlock(textField.text);
+    }
 }
 
 -(void)editDidEnd:(UITextField *)textField
 {
-    
+    if (textField.text.length == 11) {
+        [self.cellRACSubject sendNext:textField.text];
+    }
 }
 - (void)awakeFromNib {
     [super awakeFromNib];

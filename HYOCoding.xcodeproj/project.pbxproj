@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		A8E38C8BF714DB428E9FE890 /* libPods-HYOCoding.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FF85FF8CF4B0EE6E911B2263 /* libPods-HYOCoding.a */; };
+		C906368922942B9F00064282 /* HYOCoding_NetAPIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C906368822942B9F00064282 /* HYOCoding_NetAPIManager.m */; };
+		C906368A22942B9F00064282 /* HYOCoding_NetAPIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C906368822942B9F00064282 /* HYOCoding_NetAPIManager.m */; };
+		C906368B22942B9F00064282 /* HYOCoding_NetAPIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C906368822942B9F00064282 /* HYOCoding_NetAPIManager.m */; };
 		C94113472233BBD3008A41D9 /* PR_review_undo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C9410FBF2233BBCC008A41D9 /* PR_review_undo@2x.png */; };
 		C94113482233BBD3008A41D9 /* PR_review_undo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C9410FBF2233BBCC008A41D9 /* PR_review_undo@2x.png */; };
 		C94113492233BBD3008A41D9 /* PR_review_undo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C9410FBF2233BBCC008A41D9 /* PR_review_undo@2x.png */; };
@@ -2558,6 +2561,12 @@
 		C9411D3F2233C4F8008A41D9 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9411D3E2233C4F8008A41D9 /* LoginViewController.m */; };
 		C9411D402233C4F8008A41D9 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9411D3E2233C4F8008A41D9 /* LoginViewController.m */; };
 		C9411D412233C4F8008A41D9 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9411D3E2233C4F8008A41D9 /* LoginViewController.m */; };
+		C9599D1322631AEF00D7EB29 /* ForgetPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9599D1222631AEF00D7EB29 /* ForgetPasswordViewController.m */; };
+		C9599D1422631AEF00D7EB29 /* ForgetPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9599D1222631AEF00D7EB29 /* ForgetPasswordViewController.m */; };
+		C9599D1522631AEF00D7EB29 /* ForgetPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9599D1222631AEF00D7EB29 /* ForgetPasswordViewController.m */; };
+		C9599D182263280A00D7EB29 /* NSString+Common.m in Sources */ = {isa = PBXBuildFile; fileRef = C9599D172263280A00D7EB29 /* NSString+Common.m */; };
+		C9599D192263280A00D7EB29 /* NSString+Common.m in Sources */ = {isa = PBXBuildFile; fileRef = C9599D172263280A00D7EB29 /* NSString+Common.m */; };
+		C9599D1A2263280A00D7EB29 /* NSString+Common.m in Sources */ = {isa = PBXBuildFile; fileRef = C9599D172263280A00D7EB29 /* NSString+Common.m */; };
 		C95A7ACC223132EF00B7FC58 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C95A7ACB223132EF00B7FC58 /* AppDelegate.m */; };
 		C95A7AD5223132EF00B7FC58 /* HYOCoding.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C95A7AD3223132EF00B7FC58 /* HYOCoding.xcdatamodeld */; };
 		C95A7AD7223132F100B7FC58 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C95A7AD6223132F100B7FC58 /* Assets.xcassets */; };
@@ -2610,6 +2619,7 @@
 		C9765347223BC7E500F01D3B /* UILabel+Common.m in Sources */ = {isa = PBXBuildFile; fileRef = C9765346223BC7E500F01D3B /* UILabel+Common.m */; };
 		C9765348223BC7E500F01D3B /* UILabel+Common.m in Sources */ = {isa = PBXBuildFile; fileRef = C9765346223BC7E500F01D3B /* UILabel+Common.m */; };
 		C9765349223BC7E500F01D3B /* UILabel+Common.m in Sources */ = {isa = PBXBuildFile; fileRef = C9765346223BC7E500F01D3B /* UILabel+Common.m */; };
+		C99D7E5E22CB7B2400604699 /* UIButton+Common.m in Sources */ = {isa = PBXBuildFile; fileRef = C99D7E5D22CB7B2400604699 /* UIButton+Common.m */; };
 		C9CF496D223681BB00F5318F /* KSGuaidViewManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C9CF4968223681BB00F5318F /* KSGuaidViewManager.m */; };
 		C9CF496E223681BB00F5318F /* KSGuaidViewManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C9CF4968223681BB00F5318F /* KSGuaidViewManager.m */; };
 		C9CF496F223681BB00F5318F /* KSGuaidViewManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C9CF4968223681BB00F5318F /* KSGuaidViewManager.m */; };
@@ -2641,6 +2651,8 @@
 /* Begin PBXFileReference section */
 		A57896C928C7FF0FBEB4C9E4 /* Pods-HYOCoding.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HYOCoding.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HYOCoding/Pods-HYOCoding.debug.xcconfig"; sourceTree = "<group>"; };
 		AD96EC116AE62D9BA8463D43 /* Pods-HYOCoding.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HYOCoding.release.xcconfig"; path = "Pods/Target Support Files/Pods-HYOCoding/Pods-HYOCoding.release.xcconfig"; sourceTree = "<group>"; };
+		C906368722942B9F00064282 /* HYOCoding_NetAPIManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HYOCoding_NetAPIManager.h; sourceTree = "<group>"; };
+		C906368822942B9F00064282 /* HYOCoding_NetAPIManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HYOCoding_NetAPIManager.m; sourceTree = "<group>"; };
 		C9410FBF2233BBCC008A41D9 /* PR_review_undo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "PR_review_undo@2x.png"; sourceTree = "<group>"; };
 		C9410FC02233BBCC008A41D9 /* PR_push@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "PR_push@2x.png"; sourceTree = "<group>"; };
 		C9410FC12233BBCC008A41D9 /* icon_add_comment@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_add_comment@2x.png"; sourceTree = "<group>"; };
@@ -3493,6 +3505,10 @@
 		C9411D3A2233BD7C008A41D9 /* HYOCoding.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HYOCoding.pch; sourceTree = "<group>"; };
 		C9411D3D2233C4F8008A41D9 /* LoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		C9411D3E2233C4F8008A41D9 /* LoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		C9599D1122631AEF00D7EB29 /* ForgetPasswordViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ForgetPasswordViewController.h; sourceTree = "<group>"; };
+		C9599D1222631AEF00D7EB29 /* ForgetPasswordViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ForgetPasswordViewController.m; sourceTree = "<group>"; };
+		C9599D162263280A00D7EB29 /* NSString+Common.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+Common.h"; sourceTree = "<group>"; };
+		C9599D172263280A00D7EB29 /* NSString+Common.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+Common.m"; sourceTree = "<group>"; };
 		C95A7AC7223132EF00B7FC58 /* HYOCoding.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HYOCoding.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C95A7ACA223132EF00B7FC58 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		C95A7ACB223132EF00B7FC58 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -3536,6 +3552,8 @@
 		C9765340223BA43800F01D3B /* UIColor+expanded.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+expanded.m"; sourceTree = "<group>"; };
 		C9765345223BC7E500F01D3B /* UILabel+Common.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UILabel+Common.h"; sourceTree = "<group>"; };
 		C9765346223BC7E500F01D3B /* UILabel+Common.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UILabel+Common.m"; sourceTree = "<group>"; };
+		C99D7E5C22CB7B2400604699 /* UIButton+Common.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIButton+Common.h"; sourceTree = "<group>"; };
+		C99D7E5D22CB7B2400604699 /* UIButton+Common.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIButton+Common.m"; sourceTree = "<group>"; };
 		C9CF4967223681BB00F5318F /* KSGuaidViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSGuaidViewController.h; sourceTree = "<group>"; };
 		C9CF4968223681BB00F5318F /* KSGuaidViewManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSGuaidViewManager.m; sourceTree = "<group>"; };
 		C9CF4969223681BB00F5318F /* KSGuaidViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSGuaidViewCell.h; sourceTree = "<group>"; };
@@ -3586,6 +3604,15 @@
 				FF85FF8CF4B0EE6E911B2263 /* libPods-HYOCoding.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C906368122942AF000064282 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				C906368722942B9F00064282 /* HYOCoding_NetAPIManager.h */,
+				C906368822942B9F00064282 /* HYOCoding_NetAPIManager.m */,
+			);
+			path = Manager;
 			sourceTree = "<group>";
 		};
 		C9410FBE2233BBCC008A41D9 /* Images */ = {
@@ -4899,6 +4926,8 @@
 			children = (
 				C9411D3D2233C4F8008A41D9 /* LoginViewController.h */,
 				C9411D3E2233C4F8008A41D9 /* LoginViewController.m */,
+				C9599D1122631AEF00D7EB29 /* ForgetPasswordViewController.h */,
+				C9599D1222631AEF00D7EB29 /* ForgetPasswordViewController.m */,
 			);
 			path = RegisterAndLogin;
 			sourceTree = "<group>";
@@ -5060,6 +5089,7 @@
 		C9765339223BA3DE00F01D3B /* Util */ = {
 			isa = PBXGroup;
 			children = (
+				C906368122942AF000064282 /* Manager */,
 				C9765344223BC7B300F01D3B /* Widgets */,
 			);
 			path = Util;
@@ -5072,6 +5102,10 @@
 				C9765340223BA43800F01D3B /* UIColor+expanded.m */,
 				C9765345223BC7E500F01D3B /* UILabel+Common.h */,
 				C9765346223BC7E500F01D3B /* UILabel+Common.m */,
+				C9599D162263280A00D7EB29 /* NSString+Common.h */,
+				C9599D172263280A00D7EB29 /* NSString+Common.m */,
+				C99D7E5C22CB7B2400604699 /* UIButton+Common.h */,
+				C99D7E5D22CB7B2400604699 /* UIButton+Common.m */,
 			);
 			path = Widgets;
 			sourceTree = "<group>";
@@ -7828,17 +7862,21 @@
 				C9765347223BC7E500F01D3B /* UILabel+Common.m in Sources */,
 				C95A7B29223149F900B7FC58 /* HVideoViewController.m in Sources */,
 				C9765336223B9EB400F01D3B /* PhoneCodeButton.m in Sources */,
+				C99D7E5E22CB7B2400604699 /* UIButton+Common.m in Sources */,
 				C9CF4973223681BB00F5318F /* KSGuaidViewCell.m in Sources */,
 				C95A7ACC223132EF00B7FC58 /* AppDelegate.m in Sources */,
 				C9765341223BA43800F01D3B /* UIColor+expanded.m in Sources */,
+				C9599D182263280A00D7EB29 /* NSString+Common.m in Sources */,
 				C95A7ADD223132F100B7FC58 /* main.m in Sources */,
 				C95A7B1C22313B1500B7FC58 /* Mine_RootViewController.m in Sources */,
 				C95A7B0D22313A1E00B7FC58 /* Task_RootViewController.m in Sources */,
 				C95A7B2122313B2300B7FC58 /* RootViewController.m in Sources */,
 				C9765331223B9DDB00F01D3B /* Input_OnlyText_Cell.m in Sources */,
 				C9411D3F2233C4F8008A41D9 /* LoginViewController.m in Sources */,
+				C906368922942B9F00064282 /* HYOCoding_NetAPIManager.m in Sources */,
 				C95A7B012231341C00B7FC58 /* HNavigationController.m in Sources */,
 				C95A7AD5223132EF00B7FC58 /* HYOCoding.xcdatamodeld in Sources */,
+				C9599D1322631AEF00D7EB29 /* ForgetPasswordViewController.m in Sources */,
 				C95A7B1222313AA400B7FC58 /* Bubbling_RootViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -7848,7 +7886,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				C95A7B09223139FD00B7FC58 /* Project_RootViewController.m in Sources */,
+				C906368A22942B9F00064282 /* HYOCoding_NetAPIManager.m in Sources */,
 				C95A7B1322313AA400B7FC58 /* Bubbling_RootViewController.m in Sources */,
+				C9599D1422631AEF00D7EB29 /* ForgetPasswordViewController.m in Sources */,
 				C9765342223BA43800F01D3B /* UIColor+expanded.m in Sources */,
 				C9CF4974223681BB00F5318F /* KSGuaidViewCell.m in Sources */,
 				C9765348223BC7E500F01D3B /* UILabel+Common.m in Sources */,
@@ -7862,6 +7902,7 @@
 				C95A7B1D22313B1500B7FC58 /* Mine_RootViewController.m in Sources */,
 				C95A7B0E22313A1E00B7FC58 /* Task_RootViewController.m in Sources */,
 				C95A7B022231341C00B7FC58 /* HNavigationController.m in Sources */,
+				C9599D192263280A00D7EB29 /* NSString+Common.m in Sources */,
 				C9CF4971223681BB00F5318F /* KSGuaidViewController.m in Sources */,
 				C95A7B1822313AB700B7FC58 /* Message_RootViewController.m in Sources */,
 				C95A7AE7223132F100B7FC58 /* HYOCodingTests.m in Sources */,
@@ -7874,7 +7915,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				C95A7B0A223139FD00B7FC58 /* Project_RootViewController.m in Sources */,
+				C906368B22942B9F00064282 /* HYOCoding_NetAPIManager.m in Sources */,
 				C95A7B1422313AA400B7FC58 /* Bubbling_RootViewController.m in Sources */,
+				C9599D1522631AEF00D7EB29 /* ForgetPasswordViewController.m in Sources */,
 				C9765343223BA43800F01D3B /* UIColor+expanded.m in Sources */,
 				C9CF4975223681BB00F5318F /* KSGuaidViewCell.m in Sources */,
 				C9765349223BC7E500F01D3B /* UILabel+Common.m in Sources */,
@@ -7888,6 +7931,7 @@
 				C95A7B1E22313B1500B7FC58 /* Mine_RootViewController.m in Sources */,
 				C95A7B0F22313A1E00B7FC58 /* Task_RootViewController.m in Sources */,
 				C95A7B032231341C00B7FC58 /* HNavigationController.m in Sources */,
+				C9599D1A2263280A00D7EB29 /* NSString+Common.m in Sources */,
 				C9CF4972223681BB00F5318F /* KSGuaidViewController.m in Sources */,
 				C95A7B1922313AB700B7FC58 /* Message_RootViewController.m in Sources */,
 				C95A7AF2223132F100B7FC58 /* HYOCodingUITests.m in Sources */,
@@ -7973,7 +8017,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -8026,7 +8070,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -8039,16 +8083,18 @@
 			baseConfigurationReference = A57896C928C7FF0FBEB4C9E4 /* Pods-HYOCoding.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 9667A46C8L;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = Q87QUX3533;
 				GCC_PREFIX_HEADER = "$(PROJECT_DIR)/HYOCoding/OtherFile/HYOCoding.pch";
 				INFOPLIST_FILE = HYOCoding/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = mob.HYOCoding;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mob.product.ShareSDK;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = MobProvisioningProfiles;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -8058,16 +8104,18 @@
 			baseConfigurationReference = AD96EC116AE62D9BA8463D43 /* Pods-HYOCoding.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 9667A46C8L;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = Q87QUX3533;
 				GCC_PREFIX_HEADER = "$(PROJECT_DIR)/HYOCoding/OtherFile/HYOCoding.pch";
 				INFOPLIST_FILE = HYOCoding/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = mob.HYOCoding;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mob.product.ShareSDK;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = MobProvisioningProfiles;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
